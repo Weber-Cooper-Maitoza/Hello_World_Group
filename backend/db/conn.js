@@ -25,6 +25,7 @@ module.exports = {
 				console.log(
 					"Pinged your deployment. You successfully connected to MongoDB!"
 				);
+				_db = client.db("sample_mflix");
 			} finally {
 				// Ensures that the client will close when you finish/error
 				//console.log("Closing the client")
