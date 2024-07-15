@@ -15,6 +15,7 @@ export default function Movie() {
         if (response.ok) {
           console.log("Got Response");
           const details = await response.json();
+          console.log(details)
           setMovieDetail(details);
         } else {
           console.log("Bad Response");
@@ -35,7 +36,7 @@ export default function Movie() {
       <div>
         <h1>Title: {movieDetail.title}</h1>
         <h3>Plot: {movieDetail.plot}</h3>
-        <h3>Genre: {movieDetail.genres.join(", ")}</h3>
+        <h3>Genre: {movieDetail.genres.join(", ") || "No Genre"}</h3>
         <h3>Year: {movieDetail.year}</h3>
       </div>
     );
