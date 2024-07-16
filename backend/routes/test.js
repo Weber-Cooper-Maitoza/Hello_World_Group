@@ -8,7 +8,6 @@ routes.route("/hello").get(async (req, res) => {
 	try {
 		console.log("hello")
 		let db_connect = dbo.getDb().collection("movies");
-		js
 	const result = await db_connect
             .aggregate([{ $sample: { size: 1 } }])
             .toArray();
